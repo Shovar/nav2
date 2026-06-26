@@ -1,0 +1,70 @@
+pure_pursuit_navigator:
+  ros__parameters:
+    lookahead_distance: 0.4
+    max_linear_vel: 0.35
+    min_linear_vel: 0.05
+    max_angular_vel: 0.8
+    goal_tolerance: 0.2
+    yaw_goal_tolerance: 0.2
+    controller_frequency: 30.0
+    avoidance_min_dist: 0.3
+    avoidance_forward_angle: 45
+    avoidance_max_speed_red: 0.3
+    cmd_vel_topic: /cmd_vel
+    plan_topic: /plan
+    obstacle_threshold: 60
+    inflation_radius_cells: 4
+    robot_frame: base_link
+    global_frame: map
+    odom_frame: odom
+
+amcl:
+  ros__parameters:
+    alpha1: 0.05
+    alpha2: 0.05
+    alpha3: 0.05
+    alpha4: 0.05
+    alpha5: 0.05
+    base_frame_id: "base_footprint"
+    beam_skip_distance: 0.5
+    beam_skip_error_threshold: 0.9
+    beam_skip_threshold: 0.3
+    do_beamskip: false
+    global_frame_id: "map"
+    lambda_short: 0.1
+    laser_likelihood_max_dist: 3.0
+    laser_max_range: 100.0
+    laser_min_range: -1.0
+    laser_model_type: "likelihood_field"
+    max_beams: 120
+    max_particles: 3000
+    min_particles: 1000
+    odom_frame_id: "odom"
+    pf_err: 0.05
+    pf_z: 0.95
+    recovery_alpha_fast: 0.0
+    recovery_alpha_slow: 0.0
+    resample_interval: 2
+    robot_model_type: "nav2_amcl::DifferentialMotionModel"
+    save_pose_rate: 0.5
+    sigma_hit: 0.3
+    tf_broadcast: true
+    transform_tolerance: 0.5
+    update_min_a: 0.1
+    update_min_d: 0.15
+    z_hit: 0.8
+    z_max: 0.05
+    z_rand: 0.05
+    z_short: 0.1
+    scan_topic: /scan
+    map_topic: /map
+    set_initial_pose: true
+    always_reset_initial_pose: false
+    first_map_only: false
+    initial_pose:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      yaw: 0.0
+
+# yaml_filename is provided by the 'map' launch argument in localization_launch.py

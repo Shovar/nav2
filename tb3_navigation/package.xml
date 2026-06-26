@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>tb3_navigation</name>
+  <version>0.1.0</version>
+  <description>Sistema de navegación autónomo para TurtleBot3 Waffle con Pure Pursuit en Python</description>
+  <maintainer email="user@user.com">user</maintainer>
+  <license>Apache 2.0</license>
+
+  <depend>rclpy</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>tf2_ros</depend>
+  <depend>tf_transformations</depend>
+  <depend>visualization_msgs</depend>
+  <depend>nav2_msgs</depend>
+  <depend>nav2_bringup</depend>
+  <depend>turtlebot3_gazebo</depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
